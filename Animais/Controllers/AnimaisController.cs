@@ -43,22 +43,31 @@ namespace Animais.Controllers
 
         [HttpPost]
         public IActionResult Cadastrar(AnimaisModels animaisModels)
-
         {
-            _context.Add(animaisModels);
-            _context.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                _context.Add(animaisModels);
+                _context.SaveChanges();
 
-            return RedirectToAction("Index");
+                return RedirectToAction("Index");
+            }
+
+            return View(animaisModels);
         }
 
         [HttpPost]
         public IActionResult Editar(AnimaisModels animaisModels)
-
         {
-            _context.Update(animaisModels);
-            _context.SaveChanges();
+            if (ModelState.IsValid)
+            {
+                _context.Update(animaisModels);
+                _context.SaveChanges();
 
-            return RedirectToAction("Index");
+
+                return RedirectToAction("Index");
+            }
+
+            return View(animaisModels);
         }
 
         [HttpPost]

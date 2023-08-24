@@ -6,18 +6,22 @@
     <div class="form-group">
         <label for="formGroupExampleInput">Nome</label>
         <input type="text" asp-for=Nome class="form-control" id="formGroupExampleInput" placeholder="Example input">
+        <span asp-validation-for="Nome" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label for="formGroupExampleInput2">Idade</label>
         <input type="text" asp-for=Idade class ="form-control" id="formGroupExampleInput2" placeholder="Another input">
+        <span asp-validation-for="Idade" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label for="formGroupExampleInput2">Raça</label>
         <input type="text" asp-for=Raça class ="form-control" id="formGroupExampleInput2" placeholder="Another input">
+        <span asp-validation-for="Raça" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label for="formGroupExampleInput2">Porte</label>
         <input type="text" asp-for=Porte class ="form-control" id="formGroupExampleInput2" placeholder="Another input">
+        <span asp-validation-for="Porte" class="text-danger"></span>
     </div>
     <div>
         <button type="submit" class="btn btn-success">Cadastrar</button>
