@@ -1,0 +1,28 @@
+﻿@model AnimaisModels;
+
+<h2> Editar Cadastro</h2>
+
+<form method="post">
+    <input type="hidden" asp-for="Id"/>
+
+    <div class="form-group">
+        <label for="formGroupExampleInput">Nome</label>
+        <input type="text" asp-for=Nome class="form-control" id="formGroupExampleInput" placeholder="Example input">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Idade</label>
+        <input type="text" asp-for=Idade class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Raça</label>
+        <input type="text" asp-for=Raça class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    </div>
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Porte</label>
+        <input type="text" asp-for=Porte class="form-control" id="formGroupExampleInput2" placeholder="Another input">
+    </div>
+    <div>
+        <button type="submit" class="btn btn-success">Concluir Edição</button>
+        <a class="btn btn-primary w-30" asp-controller="Animais" asp-action="Index">Voltar</a>
+    </div>
+</form>

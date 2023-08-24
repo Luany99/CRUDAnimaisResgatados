@@ -1,0 +1,50 @@
+﻿@model IEnumerable<AnimaisModels> 
+
+
+@*    <style>
+    .table th:last-child,
+    .table td:last-child {
+        width:230px
+            }
+    </style>*@
+
+<h1>Pets Regastados </h1>
+
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Raça</th>
+            <th scope="col">Porte</th>
+            <th ></th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        @if (Model != null)
+        {
+            @foreach (var animais in Model)
+            {
+                <tr>
+                    <td>@animais.Nome</td>
+                    <td>@animais.Idade</td>
+                    <td>@animais.Raça</td>
+                    <td>@animais.Porte</td>
+
+
+                    <td>
+                        <a asp-controller="Animais" asp-action="Editar" asp-route-id="@animais.Id" class="btn btn-warning mx-3">Editar</a>
+                        <a asp-controller="Animais" asp-action="Excluir" asp-route-id="@animais.Id" class="btn btn-warning mx-3">Excluir</a>
+                    </td>
+                </tr/>
+            }
+        }
+
+    </tbody>
+</table>
+
+
+<a class="btn btn-primary" asp-controller="Animais" asp-action="Cadastrar">Cadastrar</a>
+
