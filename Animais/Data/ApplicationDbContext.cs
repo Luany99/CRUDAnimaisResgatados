@@ -9,7 +9,7 @@ namespace Animais.Data
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) 
         {
-            optionsBuilder.UseSqlServer(@"Server=DESKTOP-IAH94IU\SQLEXPRESS;Trusted_connection=true; Database=Animais; TrustServerCertificate=True;");
+            optionsBuilder.UseSqlServer("INSIRA AQUI SUA STRING DE CONEXÃO");
         }
         public DbSet<AnimaisModels> AnimaisModels { get; set; }
 
